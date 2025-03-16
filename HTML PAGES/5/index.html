@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #0f0303;
+            background-color: #ced2c7;
+        }
+
+        header {
+            background: #222;
+            color: #b71414;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 2px solid transparent;
+            overflow: hidden;
+            position: relative;
+            height: 100%; 
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 255, 255, 0.3);
+            border-color: #0ff;
+            z-index: 2;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card-title {
+            transition: text-shadow 0.3s ease;
+        }
+
+        .card:hover .card-title {
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .about, .contact {
+            padding: 60px 20px;
+            background: #abe4e1;
+            text-align: center;
+        }
+
+        .contact {
+            background: #ffffff;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #e65a50;
+        }
+
+        
+        .carousel-item img {
+            max-width: 80%; 
+            max-height: 500px; 
+            margin: 0 auto; 
+            display: block; 
+            border-radius: 10px; 
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            background-color: transparent; 
+            border: none; 
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1); 
+            background-color: rgba(0, 0, 0, 0.3); 
+            border-radius: 50%; 
+            padding: 10px; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        .carousel-indicators {
+            bottom: -40px;
+        }
+
+        .carousel-indicators button {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <h1>ILIAZ's PHOTOGRAPHY</h1>
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    
+    <section id="gallery" class="container py-5">
+        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+            </div>
+
+            
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="card h-100">
+                        <img src="taj mahal.jpg" class="card-img-top" alt="Photo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">"TAJ MAHAL"</h5>
+                            <p class="card-text">The Taj Mahal, a UNESCO World Heritage Site in Agra, India, is a stunning white marble mausoleum built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal, symbolizing eternal love and architectural brilliance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="charminar.jpg" class="card-img-top" alt="Photo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">"CHARMINAR"</h5>
+                            <p class="card-text">Charminar, the iconic monument of Hyderabad, was built in 1591 by Sultan Muhammad Quli Qutb Shah. Known for its grand arches and towering minarets, it stands as a symbol of the city's rich history and culture.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="vizag beach.jpg" class="card-img-top" alt="Photo 3">
+                        <div class="card-body">
+                            <h5 class="card-title">"VIZAG BEACH"</h5>
+                            <p class="card-text">Vizag Beach, located in Visakhapatnam, is known for its serene coastline, golden sands, and breathtaking sunrises. It is a popular destination for relaxation, water sports, and capturing the beauty of the Bay of Bengal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="munnar.jpg" class="card-img-top" alt="Photo 4">
+                        <div class="card-body">
+                            <h5 class="card-title">"MUNNAR"</h5>
+                            <p class="card-text">Munnar, a picturesque hill station in Kerala, is famous for its lush tea plantations, misty hills, and breathtaking landscapes. It is a paradise for nature lovers, offering serene views and a refreshing escape.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="red fort.jpg" class="card-img-top" alt="Photo 5">
+                        <div class="card-body">
+                            <h5 class="card-title">"RED FORT"</h5>
+                            <p class="card-text">The Red Fort, a UNESCO World Heritage Site in Delhi, is a magnificent Mughal fortress built by Emperor Shah Jahan in 1648. Known for its red sandstone walls and historical significance, it stands as a symbol of India's rich heritage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="mount everest.jpg" class="card-img-top" alt="Photo 6">
+                        <div class="card-body">
+                            <h5 class="card-title">"MOUNT EVEREST"</h5>
+                            <p class="card-text">Mount Everest, the world's highest peak at 8,848.86 meters, stands as a majestic challenge for climbers and a breathtaking wonder of nature. Located in the Himalayas, it symbolizes adventure, endurance, and the spirit of exploration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="eiffel tower.jpg" class="card-img-top" alt="Photo 7">
+                        <div class="card-body">
+                            <h5 class="card-title">"EIFFEL TOWER"</h5>
+                            <p class="card-text">The Eiffel Tower, an iconic landmark in Paris, France, was built in 1889 and stands 330 meters tall. A symbol of romance and architectural brilliance, it attracts millions of visitors worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+                 
+                
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="Nallamala Forest.jpg" class="card-img-top" alt="Photo 8">
+                        <div class="card-body">
+                            <h5 class="card-title">"NALLAMALLA FOREST"</h5>
+                            <p class="card-text">Nallamala Forest, spread across Andhra Pradesh and Telangana, is a dense and biodiverse forest range known for its rich wildlife, scenic landscapes, and the famous Srisailam Temple. It is a paradise for nature lovers and adventure seekers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="wankahde.jpg" class="card-img-top" alt="Photo 9">
+                        <div class="card-body">
+                            <h5 class="card-title">"WANKHADE STADIUM"</h5>
+                            <p class="card-text">Wankhede Stadium, located in Mumbai, is one of India's most iconic cricket stadiums, known for hosting historic matches, including the 2011 ICC Cricket World Cup final. With a seating capacity of over 30,000, it offers an electrifying atmosphere for cricket fans.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="Gandikota.jpg" class="card-img-top" alt="Photo 10">
+                        <div class="card-body">
+                            <h5 class="card-title">"GANDIKOTA"</h5>
+                            <p class="card-text">Gandikota, often called the "Grand Canyon of India," is a stunning gorge in Andhra Pradesh, formed by the Pennar River cutting through rocky terrain. It is known for its breathtaking landscapes, ancient fort, and rich historical significance.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me:</h2>
+            <p>I'm Iliazkhan,a passionate photographer specializing in capturing the beauty of landscapes and places across the country.</p>
+            <p>I love exploring new places and capturing their beauty through my lens.</p>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me:</h2>
+            <form action="submit_form.php" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Contact: iliazkhan2003@gmail.com</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

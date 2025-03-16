@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ILiaz Recipes</title>
+        
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <style>
+        
+        body {
+            background-color: #934f4f;
+            font-family: 'Arial', sans-serif;
+            color: #a89999;
+        }
+        header {
+            background: url('food.jpg') no-repeat center center/cover;
+            padding: 100px 20px;
+            color: rgb(11, 190, 148);
+            text-align: center;
+        }
+        .header-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .recipe-card {
+            background: rgb(165, 158, 160);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 400px; 
+            overflow: hidden; 
+            color: #333;
+        }
+        .recipe-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .recipe-card img {
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: 150px; 
+            object-fit: cover; 
+        }
+        .recipe-card:hover img {
+            transform: scale(1.05);
+        }
+        .recipe-card h3 {
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        .recipe-card:hover h3 {
+            color: #160b04;
+        }
+        .btn-custom {
+            background-color: #0c0601;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #100804;
+        }
+        .section-heading {
+            color: #0b0402;
+            margin: 40px 0 20px;
+            text-align: center;
+        }
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        .category-card h3 {
+            margin: 15px 0;
+        }
+        .category-card p {
+            color: #666;
+        }
+        .category-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .form-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            color: #333;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container .form-control {
+            margin-bottom: 15px;
+        }
+        .form-container .btn-custom {
+            background-color: #e65c00;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .form-container .btn-custom:hover {
+            background-color: #0c0501;
+        }
+    </style>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Iliaz Recipes</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#recipes">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="#categories">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#submit">Submit a
+                                Recipe</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+        <header>
+            <div class="header-content">
+                <h1 class="display-4">ILIAZ <span
+                        class="sans-serif">RECIPES</span></h1>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="#recipes" class="btn btn-custom">Recipes</a>
+                    <a href="#categories" class="btn btn-custom">Categories</a>
+                    <a href="#submit" class="btn btn-custom">Submit a Recipe</a>
+                </div>
+            </div>
+        </header>
+
+        
+        <section id="recipes" class="container my-5">
+            <h2 class="section-heading">RECIPES</h2>
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <img src="biryani.jpeg" alt="biryani" class="img-fluid">
+                        <div class="p-3">
+                            <h3>HYDERABAD BIRYANI</h3>
+                            <p class="text-muted">by iliazrecipes</p>
+                            <h4 class="text-danger">Ingredients:</h4>
+                            <p>Basmati Rice,Chicken,Water,Masala,Oil.</p>
+                            <h4 class="text-danger">Process:</h4>
+                            <p>Marinate,layer,dum-cook,serve.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <img src="fish.jpeg" alt="fish" class="img-fluid">
+                        <div class="p-3">
+                            <h3>FISH</h3>
+                            <p class="text-muted">by iliazrecipes</p>
+                            <h4 class="text-danger">Ingredients:</h4>
+                            <p>Fish,Water,Oil,Mirchi,Turmeric.</p>
+                            <h4 class="text-danger">Process:</h4>
+                            <p>Clean,marinate,cook,serve.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <img src="noodles.jpeg" alt="noodles"
+                            class="img-fluid">
+                        <div class="p-3">
+                            <h3>NOODLES</h3>
+                            <p class="text-muted">by iliazrecipes</p>
+                            <h4 class="text-danger">Ingredients:</h4>
+                            <p>Noodles,garam masala,spices,capsicum</p>
+                            <h4 class="text-danger">Process:</h4>
+                            <p>Boil,drain,stir-fry,serve.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <img src="dal.jpeg" alt="dal" class="img-fluid">
+                        <div class="p-3">
+                            <h3>DAL</h3>
+                            <p class="text-muted">by iliazrecipes</p>
+                            <h4 class="text-danger">Ingredients:</h4>
+                            <p>dal,mirchi,spices,salt.</p>
+                            <h4 class="text-danger">Process:</h4>
+                            <p>Soak,boil,temper,serve.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <img src="momos.jpeg" alt="momos"
+                            class="img-fluid">
+                        <div class="p-3">
+                            <h3>MOMOS</h3>
+                            <p class="text-muted">by iliazrecipes</p>
+                            <h4 class="text-danger">Ingredients:</h4>
+                            <p>simple flour and water dough,ground meat.</p>
+                            <h4 class="text-danger">Process:</h4>
+                            <p>Knead, fill, shape, steam.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <img src="parota.jpeg" alt="parota" class="img-fluid">
+                        <div class="p-3">
+                            <h3>PAROTA</h3>
+                            <p class="text-muted">by iliazrecipes</p>
+                            <h4 class="text-danger">Ingredients:</h4>
+                            <p>maida flour,oil,water,salt.</p>
+                            <h4 class="text-danger">Process:</h4>
+                            <p>Mix flour and make roll,fold and cook.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="categories" class="container my-5">
+            <h2 class="text-center text-white mb-4">Categories</h2>
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <h3>BREAKFAST</h3>
+                        <p>Breakfast is the best start to a fresh and energetic day with warmth and joy.</p>
+                        <a href="#breakfast-recipes" class="btn btn-custom">View
+                            Recipes</a>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <h3>LUNCH</h3>
+                        <p>Lunch refuels your energy and keeps you going for the rest of the day.</p>
+                        <a href="#lunch-recipes" class="btn btn-custom">View
+                            Recipes</a>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <h3>DINNER</h3>
+                        <p>Dinner is a peaceful meal that ends the day with warmth and satisfaction.</p>
+                        <a href="#dinner-recipes" class="btn btn-custom">View
+                            Recipes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="submit" class="container my-5">
+            <div class="form-container">
+                <h2>SUBMIT A RECIPE</h2>
+                <form>
+                    
+                    <div class="mb-3">
+                        <label for="recipeName" class="form-label">Recipe
+                            Name</label>
+                        <input type="text" class="form-control" id="recipeName"
+                            placeholder="Enter" required>
+                    </div>
+
+                    
+                    <div class="mb-3">
+                        <label for="ingredients"
+                            class="form-label">Ingredients</label>
+                        <textarea class="form-control" id="ingredients" rows="3"
+                            placeholder="Enter"
+                            required></textarea>
+                    </div>
+
+                    
+                    <div class="mb-3">
+                        <label for="process" class="form-label">Process</label>
+                        <textarea class="form-control" id="process" rows="5"
+                            placeholder="Enter"
+                            required></textarea>
+                    </div>
+
+                    
+                    <button type="submit" class="btn btn-custom">Submit
+                        </button>
+                </form>
+            </div>
+        </section>
+
+        
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
